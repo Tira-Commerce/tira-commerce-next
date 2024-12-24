@@ -1,3 +1,25 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "prettier",
+    "next",
+    "next/core-web-vitals",
+    "next/typescript",
+    "eslint:recommended"
+  ],
+  "globals": {
+    "React": "readonly"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".tsx", ".ts"] }
+    ],
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off"
+  }
 }
